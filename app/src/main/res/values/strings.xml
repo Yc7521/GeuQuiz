@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">GeuQuiz</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_question">Question</string>
+    <string name="menu_answer">Answer</string>
+    <string name="str_true">True</string>
+    <string name="str_false">False</string>
+    <string name="str_next">Next</string>
+    <string name="str_show_ans">Cheat!</string>
+    <string name="str_answer_tip">Are you sure you want to do this?</string>
+    <string name="str_correct">Correct</string>
+    <string name="str_incorrect">Incorrect</string>
+    <string name="str_back_to_question">Back to Question</string>
+    <string name="str_end_info">is the end of the quiz</string>
+    <string name="str_cheat_correct">please remember this answer</string>
+    <string name="str_cheat_incorrect">ur an idiot?</string>
+</resources>
