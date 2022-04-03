@@ -19,8 +19,8 @@
         <action
             android:id="@+id/action_answer_to_question"
             app:destination="@id/nav_question"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out" />
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
         <argument
             android:name="question"
             app:argType="com.geuquiz.model.Question" />
@@ -37,8 +37,8 @@
         <action
             android:id="@+id/action_question_to_answer"
             app:destination="@id/nav_answer"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out" />
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
         <argument
             android:name="index"
             app:argType="integer"

@@ -24,7 +24,7 @@ open class QuestionViewModel : ObservableFragmentViewModel<Fragment>(), Serializ
     private val size: Int
         get() = questions.value?.size ?: 0
     private val end: Boolean
-        get() = currentQuestionIndex >= questions.value?.size ?: 0
+        get() = currentQuestionIndex >= (questions.value?.size ?: 0) - 1
 
     @Bindable
     open val info: MutableLiveData<String> = MutableLiveData()
@@ -50,6 +50,7 @@ open class QuestionViewModel : ObservableFragmentViewModel<Fragment>(), Serializ
                 Snackbar.LENGTH_SHORT
             ).show()
         }
+        Log.d("QuestionViewModel", "end!")
     }
 
     open fun setQuestions(value: List<Question>) {
@@ -110,7 +111,7 @@ open class QuestionViewModel : ObservableFragmentViewModel<Fragment>(), Serializ
             return false
         }
         questions.value?.let {
-            if (currentQuestionIndex < it.size) {
+            if (currentQuestionIndex < it.size - 1) {
                 cheat = false
                 currentQuestionIndex++
                 question.value = currentQuestion.title
@@ -121,6 +122,20 @@ open class QuestionViewModel : ObservableFragmentViewModel<Fragment>(), Serializ
             }
         }
         return true
+    }
+
+    fun back() {
+        questions.value?.let {
+            if (currentQuestionIndex > 0) {
+                cheat = false
+                currentQuestionIndex--
+                question.value = currentQuestion.title
+                answer.value = currentQuestion.answer.toString()
+                info.value = "Question ${currentQuestionIndex + 1} of $size"
+                notifyPropertyChanged(BR.question)
+                notifyPropertyChanged(BR.info)
+            }
+        }
     }
 
     open fun showAnswer() {

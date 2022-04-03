@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="@{() -> data.backQuestion()}"
-                android:text="@string/str_back_to_question" />
+                android:text="@{data.tip}" />
         </LinearLayout>
 
     </LinearLayout>
